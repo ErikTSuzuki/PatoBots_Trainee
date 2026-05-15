@@ -1,0 +1,114 @@
+Command: cmake -G Ninja -B C:\Users\brun0\workspace\sumo_treinee\build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Espressif\tools\python\v6.0.1\venv\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=False C:\Users\brun0\workspace\sumo_treinee
+Configuration Report               
++---------------------------------+
+|  Parser Version: 1              |
+|  Verbosity: default             |
+|  Defaults policy: sdkconfig     |
+|  Status: Finished successfully  |
+|                                 |
++---------------------------------+
+CMake Warning at C:/esp/v6.0.1/esp-idf/tools/cmake/component_validation.cmake:65 (message):
+  Source file
+  'C:/esp/v6.0.1/esp-idf/components/lwip/lwip/src/apps/http/altcp_proxyconnect.c'
+  belongs to component lwip but is being built by component btstack.  It is
+  recommended to build source files by defining component dependencies for
+  btstack via using idf_component_register(REQUIRES lwip) or
+  idf_component_register(PRIV_REQUIRES lwip) in the CMakeLists.txt of
+  btstack.
+Call Stack (most recent call first):
+  C:/esp/v6.0.1/esp-idf/tools/cmake/component_validation.cmake:146 (__component_validation_check_sources)
+  C:/esp/v6.0.1/esp-idf/CMakeLists.txt:349 (__component_validation_run_checks)
+
+
+CMake Warning at C:/esp/v6.0.1/esp-idf/tools/cmake/component_validation.cmake:65 (message):
+  Source file 'C:/esp/v6.0.1/esp-idf/components/lwip/lwip/src/apps/http/fs.c'
+  belongs to component lwip but is being built by component btstack.  It is
+  recommended to build source files by defining component dependencies for
+  btstack via using idf_component_register(REQUIRES lwip) or
+  idf_component_register(PRIV_REQUIRES lwip) in the CMakeLists.txt of
+  btstack.
+Call Stack (most recent call first):
+  C:/esp/v6.0.1/esp-idf/tools/cmake/component_validation.cmake:146 (__component_validation_check_sources)
+  C:/esp/v6.0.1/esp-idf/CMakeLists.txt:349 (__component_validation_run_checks)
+
+
+CMake Warning at C:/esp/v6.0.1/esp-idf/tools/cmake/component_validation.cmake:65 (message):
+  Source file
+  'C:/esp/v6.0.1/esp-idf/components/lwip/lwip/src/apps/http/fsdata.c' belongs
+  to component lwip but is being built by component btstack.  It is
+  recommended to build source files by defining component dependencies for
+  btstack via using idf_component_register(REQUIRES lwip) or
+  idf_component_register(PRIV_REQUIRES lwip) in the CMakeLists.txt of
+  btstack.
+Call Stack (most recent call first):
+  C:/esp/v6.0.1/esp-idf/tools/cmake/component_validation.cmake:146 (__component_validation_check_sources)
+  C:/esp/v6.0.1/esp-idf/CMakeLists.txt:349 (__component_validation_run_checks)
+
+
+CMake Warning at C:/esp/v6.0.1/esp-idf/tools/cmake/component_validation.cmake:65 (message):
+  Source file
+  'C:/esp/v6.0.1/esp-idf/components/lwip/lwip/src/apps/http/http_client.c'
+  belongs to component lwip but is being built by component btstack.  It is
+  recommended to build source files by defining component dependencies for
+  btstack via using idf_component_register(REQUIRES lwip) or
+  idf_component_register(PRIV_REQUIRES lwip) in the CMakeLists.txt of
+  btstack.
+Call Stack (most recent call first):
+  C:/esp/v6.0.1/esp-idf/tools/cmake/component_validation.cmake:146 (__component_validation_check_sources)
+  C:/esp/v6.0.1/esp-idf/CMakeLists.txt:349 (__component_validation_run_checks)
+
+
+CMake Warning at C:/esp/v6.0.1/esp-idf/tools/cmake/component_validation.cmake:65 (message):
+  Source file
+  'C:/esp/v6.0.1/esp-idf/components/lwip/lwip/src/apps/http/httpd.c' belongs
+  to component lwip but is being built by component btstack.  It is
+  recommended to build source files by defining component dependencies for
+  btstack via using idf_component_register(REQUIRES lwip) or
+  idf_component_register(PRIV_REQUIRES lwip) in the CMakeLists.txt of
+  btstack.
+Call Stack (most recent call first):
+  C:/esp/v6.0.1/esp-idf/tools/cmake/component_validation.cmake:146 (__component_validation_check_sources)
+  C:/esp/v6.0.1/esp-idf/CMakeLists.txt:349 (__component_validation_run_checks)
+
+
+CMake Warning at C:/esp/v6.0.1/esp-idf/tools/cmake/component_validation.cmake:98 (message):
+  Include directory 'C:/esp/v6.0.1/esp-idf/components/lwip/lwip/src/include'
+  belongs to component lwip but is being used by component btstack.  It is
+  recommended to define the component dependency for 'btstack' on the
+  component lwip, i.e.  'idf_component_register(...  REQUIRES lwip)' in the
+  CMakeLists.txt of btstack, and specify the included directory as
+  idf_component_register(...  INCLUDE_DIRS <dir relative to component>) in
+  the CMakeLists.txt of component lwip.
+Call Stack (most recent call first):
+  C:/esp/v6.0.1/esp-idf/tools/cmake/component_validation.cmake:147 (__component_validation_check_include_dirs)
+  C:/esp/v6.0.1/esp-idf/CMakeLists.txt:349 (__component_validation_run_checks)
+
+
+CMake Warning at C:/esp/v6.0.1/esp-idf/tools/cmake/component_validation.cmake:98 (message):
+  Include directory
+  'C:/Users/brun0/workspace/sumo_treinee/components/bluepad32/external/btstack/port/esp32/components/btstack'
+  belongs to component btstack but is being used by component main.  It is
+  recommended to define the component dependency for 'main' on the component
+  btstack, i.e.  'idf_component_register(...  REQUIRES btstack)' in the
+  CMakeLists.txt of main, and specify the included directory as
+  idf_component_register(...  INCLUDE_DIRS <dir relative to component>) in
+  the CMakeLists.txt of component btstack.
+Call Stack (most recent call first):
+  C:/esp/v6.0.1/esp-idf/tools/cmake/component_validation.cmake:147 (__component_validation_check_include_dirs)
+  C:/esp/v6.0.1/esp-idf/CMakeLists.txt:349 (__component_validation_run_checks)
+
+
+CMake Warning at C:/esp/v6.0.1/esp-idf/tools/cmake/component_validation.cmake:98 (message):
+  Include directory
+  'C:/Users/brun0/workspace/sumo_treinee/components/bluepad32/external/btstack/port/esp32/components/btstack/include'
+  belongs to component btstack but is being used by component main.  It is
+  recommended to define the component dependency for 'main' on the component
+  btstack, i.e.  'idf_component_register(...  REQUIRES btstack)' in the
+  CMakeLists.txt of main, and specify the included directory as
+  idf_component_register(...  INCLUDE_DIRS <dir relative to component>) in
+  the CMakeLists.txt of component btstack.
+Call Stack (most recent call first):
+  C:/esp/v6.0.1/esp-idf/tools/cmake/component_validation.cmake:147 (__component_validation_check_include_dirs)
+  C:/esp/v6.0.1/esp-idf/CMakeLists.txt:349 (__component_validation_run_checks)
+
+

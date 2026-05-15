@@ -102,6 +102,36 @@ static void my_platform_on_controller_data(uni_hid_device_t* d, uni_controller_t
     if (ctl->klass != UNI_CONTROLLER_CLASS_GAMEPAD) return;
 
     uni_gamepad_t* gp = &ctl->gamepad;
+	
+	//Aceleracao
+	int aceleracao = gp->throttle;
+	
+	//direcao
+	int direcao = gp->axis_x;
+	
+	// Normaliza a direcao
+	int ajuste_curva = (direcao * aceleracao)/512;
+	
+	int vel_direita = aceleracao - ajuste_curva;
+	int vel_esquerda = aceleracao + ajuste_curva;
+	
+	//Limitacao
+	if(vel_esquerda > 1023) vel_esquerda = 1023;
+	if(vel_esquerda < 0) vel_esquerda = 0;
+	if(vel_direita > 1023) vel_direita = 1023;
+	if(vel_direita < 0) vel_direita = 0;
+	
+	//caso o RT esteja ruim
+	if (aceleracao < 20) {
+		vel_direita = 0;
+	    vel_esquerda = 0;
+	}
+	
+	motor_set_speed(&motor_direito, vel_direita);
+	motor_set_speed(&motor_esquerdo, vel_esquerda);
+	
+	//DEBUG
+	logi("RT: %d | X: %d | Dir: %d | Esq: %d\n", aceleracao, direcao, vel_direita, vel_esquerda);
 
     // LÓGICA DE TROCA DE MODO (BOTÃO B)
     static bool b_ant = false;
@@ -117,19 +147,6 @@ static void my_platform_on_controller_data(uni_hid_device_t* d, uni_controller_t
     // Se não estiver no modo Manual, não processa motores aqui
     if (modo_atual != MODO_RC) return;
 
-    // LÓGICA ARCADE (Gatilhos e Analógico)
-    int throttle = gp->throttle; // 0 a 1023
-    int brake = gp->brake;       // 0 a 1023
-    int axis_x = gp->axis_x;     // -512 a 511
-
-    int vel_base = throttle - brake;
-    int direcao = axis_x / 2;
-
-    int v_dir = vel_base - direcao;
-    int v_esq = vel_base + direcao;
-
-    motor_set_speed(&motor_direito, v_dir);
-    motor_set_speed(&motor_esquerdo, v_esq);
 }
 
 static const uni_property_t* my_platform_get_property(uni_property_idx_t idx) {
