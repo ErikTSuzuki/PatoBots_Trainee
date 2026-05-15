@@ -2,7 +2,7 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include <math.h>
-#include "../../utils/config.h"
+#include "config.h"
 
 static adc_oneshot_unit_handle_t adc1_handle;
 

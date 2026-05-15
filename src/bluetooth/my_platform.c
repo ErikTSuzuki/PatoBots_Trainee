@@ -4,8 +4,8 @@
 #include <string.h>
 #include <uni.h>
 #include "bt_control.h"
-#include "../robot/robot_states.h"
-#include "../utils/config.h"
+#include "robot_states.h"
+#include "config.h"
 
 typedef struct my_platform_instance_s {
     uni_gamepad_seat_t gamepad_seat;

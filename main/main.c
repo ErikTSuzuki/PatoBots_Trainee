@@ -8,11 +8,11 @@
 #include <btstack_run_loop.h>
 #include <uni.h>
 
-#include "src/hardware/motor/motor.h"
-#include "src/hardware/sensor/sensor_distancia.h"
-#include "src/robot/robot_task.h"
-#include "src/bluetooth/bt_control.h"
-#include "src/utils/config.h"
+#include "motor.h"
+#include "sensor_distancia.h"
+#include "robot_task.h"
+#include "bt_control.h"
+#include "config.h"
 
 void app_main(void) {
     // 1. Inicializa Memória (Essencial para o Bluetooth salvar o pareamento)

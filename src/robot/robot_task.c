@@ -1,8 +1,8 @@
 #include "robot_task.h"
 #include "robot_states.h"
-#include "../hardware/motor/motor.h"
-#include "../hardware/sensor/sensor_distancia.h"
-#include "../utils/config.h"
+#include "motor.h"
+#include "sensor_distancia.h"
+#include "config.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include <stdio.h>

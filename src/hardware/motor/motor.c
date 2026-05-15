@@ -1,5 +1,5 @@
 #include "motor.h"
-#include "../../../utils/config.h"
+#include "config.h"
 
 // Inicializa o pino STBY global da ponte H
 void motor_init_stby(gpio_num_t pin_stby) {

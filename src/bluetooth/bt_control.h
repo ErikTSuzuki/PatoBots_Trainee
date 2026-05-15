@@ -1,7 +1,7 @@
 #ifndef BT_CONTROL_H_
 #define BT_CONTROL_H_
 
-#include "../hardware/motor/motor.h"
+#include "motor.h"
 
 /**
  * @brief Obtém o motor direito para uso externo

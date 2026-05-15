@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "app-template",
-    "project_version":    "f6a51a7-dirty",
+    "project_version":    "ef590f8-dirty",
     "project_path":       "C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee",
     "idf_path":           "C:/esp/v6.0/esp-idf",
     "build_dir":          "C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee/build",
@@ -1795,8 +1795,8 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee/build/esp-idf/main/libmain.a",
-            "sources": [ "C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee/main/main.c", "C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee/main/sensor_distancia.c", "C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee/main/motor.c", "C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee/main/controle.c", "C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee/main/my_platform.c" ],
-            "include_dirs": [ ".", "../components/bluepad32/external/btstack/port/esp32/components/btstack", "../components/bluepad32/external/btstack/port/esp32/components/btstack/include" ]
+            "sources": [ "C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee/main/main.c", "C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee/src/hardware/motor/motor.c", "C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee/src/hardware/sensor/sensor_distancia.c", "C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee/src/robot/robot_task.c", "C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee/src/bluetooth/my_platform.c" ],
+            "include_dirs": [ ".", "../src", "../src/utils", "../src/hardware/motor", "../src/hardware/sensor", "../src/robot", "../src/bluetooth", "../components/bluepad32/external/btstack/port/esp32/components/btstack", "../components/bluepad32/external/btstack/port/esp32/components/btstack/include" ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",
@@ -3907,7 +3907,7 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ ".", "../components/bluepad32/external/btstack/port/esp32/components/btstack", "../components/bluepad32/external/btstack/port/esp32/components/btstack/include" ]
+            "include_dirs": [ ".", "../src", "../src/utils", "../src/hardware/motor", "../src/hardware/sensor", "../src/robot", "../src/bluetooth", "../components/bluepad32/external/btstack/port/esp32/components/btstack", "../components/bluepad32/external/btstack/port/esp32/components/btstack/include" ]
         },
         "bluepad32": {
             "alias": "idf::bluepad32",
