@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/brun0/workspace/sumo_treinee/components/bluepad32/src/components/cmd_nvs
+# Install script for directory: C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee/components/bluepad32/src/components/cmd_nvs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,6 +40,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/brun0/workspace/sumo_treinee/build/esp-idf/cmd_nvs/install_local_manifest.txt"
+  file(WRITE "C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee/build/esp-idf/cmd_nvs/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

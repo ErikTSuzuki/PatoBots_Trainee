@@ -3,5 +3,5 @@
 -fno-builtin-memcpy
 -fno-builtin-memset
 -fno-builtin-bzero
-"-specs=C:/Users/brun0/workspace/sumo_treinee/build/specs/picolibc.specs"
+-specs=picolibc.specs
 -fno-rtti

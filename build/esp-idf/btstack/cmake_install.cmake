@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/brun0/workspace/sumo_treinee/components/bluepad32/external/btstack/port/esp32/components/btstack
+# Install script for directory: C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee/components/bluepad32/external/btstack/port/esp32/components/btstack
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,6 +40,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/brun0/workspace/sumo_treinee/build/esp-idf/btstack/install_local_manifest.txt"
+  file(WRITE "C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee/build/esp-idf/btstack/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

@@ -23,7 +23,7 @@
 
  * Automatically generated file. DO NOT EDIT.
 
- * Espressif IoT Development Framework (ESP-IDF) 6.0.1 Configuration Header
+ * Espressif IoT Development Framework (ESP-IDF) 6.0.0 Configuration Header
 
  */
        
@@ -160,6 +160,7 @@ _heap_start = _heap_low_start;
 _sram1_iram_start = 0x400A0000;
 _sram1_iram_len = ( _iram_end > _sram1_iram_start) ? (_iram_end - _sram1_iram_start) : 0;
 _heap_end = ALIGN(0x40000000 - _sram1_iram_len - 3, 4);
+_data_seg_org = ORIGIN(rtc_data_seg);
 /* The lines below define location alias for .rtc.data section based on Kconfig option.
    When the option is not defined then use slow memory segment
    else the data will be placed in fast memory segment */
