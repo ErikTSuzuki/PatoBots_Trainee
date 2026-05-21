@@ -90,12 +90,7 @@ static void my_platform_on_controller_data(uni_hid_device_t* d, uni_controller_t
     if (vel_direita < -1023) vel_direita = -1023;
 
     // Deadzone de aceleração
-    if (aceleracao < 20) {
-        vel_direita = 0;
-        vel_esquerda = 0;
-    }
-
-    if (freio > -20) {
+    if (aceleracao < 20 && freio > -20) {
         vel_direita = 0;
         vel_esquerda = 0;
     }
