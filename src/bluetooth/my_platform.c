@@ -67,23 +67,27 @@ static void my_platform_on_controller_data(uni_hid_device_t* d, uni_controller_t
     // Aceleração (throttle right trigger)
     int aceleracao = gp->throttle;
 
+    // Freio
+    int freio = -(gp->brake);
+
     // Direção (analog left X axis)
     int direcao = gp->axis_x;
 
     // Normaliza e aplica zona morta
     if (direcao > -ZONA_MORTA && direcao < ZONA_MORTA) direcao = 0;
 
+    int raw = aceleracao + freio;
     // Cálculo arcade: mistura aceleração com direção
-    int ajuste_curva = (direcao * aceleracao) / 512;
+    int ajuste_curva = (direcao * raw) / 512;
 
-    int vel_direita = aceleracao - ajuste_curva;
-    int vel_esquerda = aceleracao + ajuste_curva;
+    int vel_direita = raw - ajuste_curva;
+    int vel_esquerda = raw + ajuste_curva;
 
     // Limitação a 0-1023
     if (vel_esquerda > 1023) vel_esquerda = 1023;
-    if (vel_esquerda < 0) vel_esquerda = 0;
+    if (vel_esquerda < -1023) vel_esquerda = -1023;
     if (vel_direita > 1023) vel_direita = 1023;
-    if (vel_direita < 0) vel_direita = 0;
+    if (vel_direita < -1023) vel_direita = -1023;
 
     // Deadzone de aceleração
     if (aceleracao < 20) {
@@ -91,10 +95,15 @@ static void my_platform_on_controller_data(uni_hid_device_t* d, uni_controller_t
         vel_esquerda = 0;
     }
 
+    if (freio > -20) {
+        vel_direita = 0;
+        vel_esquerda = 0;
+    }
+
     motor_set_speed(motor_dir, vel_direita);
     motor_set_speed(motor_esq, vel_esquerda);
 
-    logi("RT: %d | X: %d | Dir: %d | Esq: %d\n", aceleracao, direcao, vel_direita, vel_esquerda);
+    logi("raw: %d | RT: %d  | LT: %d | X: %d | Dir: %d | Esq: %d\n", raw,aceleracao, freio, direcao, vel_direita, vel_esquerda);
 
     // Troca de modo com botão B
     static bool b_ant = false;

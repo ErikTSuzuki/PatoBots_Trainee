@@ -1,10 +1,5 @@
 # Build artifacts
-/build/
-*.o
-*.a
-*.so
-*.elf
-*.bin
+/build
 
 # IDE
 .vscode/
