@@ -1,7 +1,0 @@
-source "C:/esp/v6.0/esp-idf/components/bootloader/Kconfig.projbuild"
-source "C:/esp/v6.0/esp-idf/components/esp_app_format/Kconfig.projbuild"
-source "C:/esp/v6.0/esp-idf/components/esp_rom/Kconfig.projbuild"
-source "C:/esp/v6.0/esp-idf/components/esptool_py/Kconfig.projbuild"
-source "C:/esp/v6.0/esp-idf/components/partition_table/Kconfig.projbuild"
-source "C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee/main/Kconfig.projbuild"
-source "C:/Users/eriks/OneDrive/Documentos/BOTS/PatoBots_Trainee/components/bluepad32/external/btstack/port/esp32/components/btstack/Kconfig.projbuild"
