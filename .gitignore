@@ -1,0 +1,31 @@
+# Build artifacts
+/build
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ESP-IDF
+sdkconfig.old
+sdkconfig
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Dependencies
+.idf_tools/
+
+# Temporary files
+*.tmp
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
