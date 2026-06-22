@@ -14,4 +14,8 @@ void robot_logic_task(void *pvParameters);
  */
 void robot_init(void);
 
+<<<<<<< HEAD
 #endif /* ROBOT_TASK_H_ */
+=======
+#endif /* ROBOT_TASK_H_ */
+>>>>>>> upstream/main

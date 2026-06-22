@@ -29,13 +29,13 @@ void inicializar_sensores(void) {
 
 int ler_sensor_raw(adc_channel_t canal) {
     int soma = 0;
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 8; i++) { // le 8 amostras
         int valor = 0;
         adc_oneshot_read(adc1_handle, canal, &valor);
         soma += valor;
         vTaskDelay(pdMS_TO_TICKS(2));
     }
-    return soma / 8;
+    return soma / 8;//faz a média dos valores
 }
 
 int raw_para_cm(int raw) {

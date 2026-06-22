@@ -20,6 +20,7 @@ static void my_platform_init(int argc, const char** argv) {
     logi("custom: init()\n");
 }
 
+//
 static void my_platform_on_init_complete(void) {
     logi("custom: on_init_complete()\n");
 
@@ -27,7 +28,7 @@ static void my_platform_on_init_complete(void) {
     uni_bt_allow_incoming_connections(true);
 
     if (1)
-        uni_bt_del_keys_unsafe();
+        uni_bt_del_keys_unsafe(); //limpa as chaves antigas, forca uma sincronizacao limpa
     else
         uni_bt_list_keys_unsafe();
 }
@@ -53,7 +54,7 @@ static uni_error_t my_platform_on_device_ready(uni_hid_device_t* d) {
     my_platform_instance_t* ins = get_my_platform_instance(d);
     ins->gamepad_seat = GAMEPAD_SEAT_A;
 
-    trigger_event_on_gamepad(d);
+    trigger_event_on_gamepad(d); //vibra o controle quando conecta
     return UNI_ERROR_SUCCESS;
 }
 
