@@ -50,10 +50,10 @@
 // ============================================================================
 #define PIN_BTN                 13
 
-<<<<<<< HEAD
-=======
-// IMPORTANTE: o TSOP inverte o sinal — o RMT já trata isso internamente.
 // ============================================================================
+// CONFIGURAÇÕES DO TSOP (Sensor IR)
+// ============================================================================
+// IMPORTANTE: o TSOP inverte o sinal — o RMT já trata isso internamente.
 #define PIN_IR_TSOP             27   // Livre nos pinos ADC/digitais do seu layout
 
 // Botões do controle
@@ -62,7 +62,6 @@
 #define IR_BTN_3        0x47    // [3] → Estratégia: percorrer borda
 #define IR_BTN_4        0x44    // [4] → Modo RC via controle
 
->>>>>>> upstream/main
 // ============================================================================
 // CONSTANTES DE CONTROLE
 // ============================================================================
@@ -71,15 +70,12 @@
 #define DISTANCIA_MAX_CM        30
 #define DISTANCIA_MIN_CM        4
 
-<<<<<<< HEAD
-#endif /* CONFIG_H_ */
-=======
 // ============================================================================
 // CONSTANTES DO STARTUP (contagem regressiva)
 // ============================================================================
 #define STARTUP_DELAY_MS        5000   // 5 segundos conforme regra oficial
 #define STARTUP_LED_BLINK_MS    200    // LED piscando rápido durante contagem
- 
+
 // ============================================================================
 // VELOCIDADES IRC (modo RC via controle IR)
 // Valores em escala 0-1023 igual ao controle Xbox
@@ -90,4 +86,3 @@
 #define IR_RC_TIMEOUT_MS        350    // Para se não receber comando por 350ms
 
 #endif /* CONFIG_H_ */
->>>>>>> upstream/main

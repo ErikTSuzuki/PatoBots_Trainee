@@ -1,5 +1,5 @@
 #include "motor.h"
-#include "config.h"
+#include "../utils/config.h"
 
 // Inicializa o pino STBY global da ponte H
 void motor_init_stby(gpio_num_t pin_stby) {
@@ -67,8 +67,4 @@ void motor_set_speed(motor_config_t *motor, int speed) {
     }
 
     ledc_update_duty(MOTOR_PWM_MODE, motor->pwm_channel);
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> upstream/main

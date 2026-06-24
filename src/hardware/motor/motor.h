@@ -38,8 +38,4 @@ void motor_init(motor_config_t *motor);
  */
 void motor_set_speed(motor_config_t *motor, int speed);
 
-<<<<<<< HEAD
 #endif // MOTOR_H_
-=======
-#endif // MOTOR_H_
->>>>>>> upstream/main
